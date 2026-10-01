@@ -2,8 +2,8 @@ name: First Workflow
 on:
   push:
     branch:
-      main
-      feature/*
+     - main
+     - feature/*
 
 jobs:
   build:
