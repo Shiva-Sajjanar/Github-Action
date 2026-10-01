@@ -1,5 +1,9 @@
 name: First Workflow
-on: push
+on:
+  push:
+    branch:
+      main
+      feature/*
 
 jobs:
   build:
@@ -8,5 +12,5 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
   
-      - name: Print Hello Message
-        run: echo "Hello from github action!"
+      - name: Building Docker Images
+        run: docker build -t my-nginx:v1 .
